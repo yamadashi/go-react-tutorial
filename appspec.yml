@@ -3,4 +3,4 @@
   os: linux
   files:
     - source: /
-      destination: /home/ubuntu/aps/go-react-tutorial/
+      destination: /home/ubuntu/apps/go-react-tutorial/
