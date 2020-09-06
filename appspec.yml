@@ -1,6 +1,18 @@
-# This is an appspec.
-  version: 0.0
-  os: linux
-  files:
-    - source: /
-      destination: /home/ubuntu/apps/go-react-tutorial/
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/apps/go-react-tutorial/
+    runas: ec2-user
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+hooks:
+  AfterInstall:
+    - location: /home/ubuntu/scripts/install.sh
+    runas: ec2-user
+  ApplicationStart:
+    - location: /home/ubuntu/scripts/start.sh
+      runas: ec2-user
