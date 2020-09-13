@@ -16,7 +16,6 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: build
 cache:
   paths:
     #- /tmp/node_modules.tar
