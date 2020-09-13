@@ -11,7 +11,8 @@ phases:
       - yarn run build
   post_build:
     commands:
-      - tar cf /tmp/node_modules.tar ./client/node_modules
+      - echo $PWD
+      - tar cf /tmp/node_modules.tar ./client/node_modules/
 artifacts:
   files:
     - '**/*'
