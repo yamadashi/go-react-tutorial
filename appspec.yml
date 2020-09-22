@@ -11,5 +11,5 @@ permissions:
     group: ec2-user
 hooks:
   ApplicationStart:
-    - location: /home/ubuntu/scripts/go-react-tutorial/start.sh
+    - location: scripts/start.sh
       runas: ec2-user
