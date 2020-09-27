@@ -1,4 +1,3 @@
 #!/bin/bash
 
-pwd
-./server/bin/server
+./home/ubuntu/apps/go-react-tutorial/server/bin/server
