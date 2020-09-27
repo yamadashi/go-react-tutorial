@@ -4,11 +4,10 @@ phases:
   pre_build:
     commands:
       #- if [ -e /tmp/node_modules.tar ]; then tar xf /tmp/node_modules.tar; fi
-      - yarn install
+      - cd ./client; yarn install
   build:
     commands:
-      - cd ./client
-      - yarn run build
+      - make build
   post_build:
     commands:
       #- echo $PWD

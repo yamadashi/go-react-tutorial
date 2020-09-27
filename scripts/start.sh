@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $PWD
+./server/bin/server
