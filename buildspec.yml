@@ -4,7 +4,9 @@ phases:
   pre_build:
     commands:
       #- if [ -e /tmp/node_modules.tar ]; then tar xf /tmp/node_modules.tar; fi
-      - cd ./client; yarn install
+      - cd ./client
+      - yarn install
+      - cd ../
   build:
     commands:
       - make build
