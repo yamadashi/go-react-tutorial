@@ -24,5 +24,5 @@ func main() {
 func getProjectRootDir() string {
 	exe, _ := os.Executable()
 	projectRootDir := filepath.Dir(exe) + "../../"
-	return http.Dir(projectRootDir)
+	return projectRootDir
 }
