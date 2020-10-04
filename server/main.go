@@ -11,7 +11,7 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		fmt.Fprintln(w, "pong")
+		fmt.Fprintln(w, "pong pong")
 	}).Methods("GET")
 	router.PathPrefix("/").Handler(
 		http.FileServer(http.Dir("public")))
