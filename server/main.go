@@ -15,14 +15,15 @@ func main() {
 		w.WriteHeader(http.StatusOK)
 		fmt.Fprintln(w, "pong")
 	}).Methods("GET")
+	dir := http.Dir(getProjectRootDir() + "public")
 	router.PathPrefix("/").Handler(
-		http.FileServer(http.Dir(getProjectRootDir() + "public")))
+		http.FileServer(dir))
 	fmt.Println("service start")
 	http.ListenAndServe(":8080", router)
 }
 
 func getProjectRootDir() string {
 	exe, _ := os.Executable()
-	projectRootDir := filepath.Dir(exe) + "../../"
+	projectRootDir := filepath.Dir(exe) + "/../../"
 	return projectRootDir
 }
